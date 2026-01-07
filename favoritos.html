@@ -15,16 +15,179 @@
 
         *{
             font-family: "Inter", sans-serif;
+            /* border: red 1px solid; */
         }
 
         @theme {
             --color-laranja: #E04300;
+            --color-cinza: #595959;
+            --color-cinza2: #959595;
         }
     </style>
 </head>
 
 <body class="">
-    <h1>Favoritos</h1>
+        <header class="flex justify-between p-4 lg:px-15 border-b border-b-black/15">
+        <!-- LOGO -->
+        <div class="flex items-center gap-3">
+            <div class="w-9 h-9 bg-laranja rounded flex justify-center items-center">
+                <img src="images/icone.png" alt="" class="block">
+            </div>
+            <span class="text-xl font-bold text-laranja">Aluga Web</span>
+        </div>
+
+        <div class="flex gap-2 lg:gap-10">
+            <!-- FAVORITO -->
+            <div class="flex items-center text-cinza gap-1 font-semibold">
+                <img src="images/favorito.png" class="h-4">
+                <p>Favoritos</p>
+            </div>
+
+            <!-- PERFIL -->
+            <div class="flex  items-center gap-3">
+                <div class=" flex flex-col items-end">
+                    <p class="text-laranja font-semibold ">Silvio Santos</p>
+                    <p class="text-cinza text-xs">Sair</p>
+                </div>
+                <img src="images/perfil.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+
+    <div class="p-4 grid  lg:p-15 lg:grid-cols-3 gap-10">
+        <!-- CARD ALUGUEL -->
+        <div class=" border border-black/15  rounded-xl w-full">
+            <img src="images/casa.png" class="h-[248px] w-full rounded-t-xl object-cover">
+            <div class="flex flex-col font-semibold">
+                <div class="flex items-center justify-between p-5">
+                    <div class="text-cinza">
+                        <p>Rua Eduardo Bezerra, 1182</p>
+                        <p>São joão do Taouape, Fortaleza/CE</p>
+                    </div>
+                    <div class="bg-laranja/20 h-10 w-10 flex justify-center items-center rounded-lg">
+                        <img src="images/lixo.png" class="h-4.5">
+                    </div>
+                </div>
+                <div class="text-cinza2 px-5">
+                    <p>Casa para alugar, 500m²</p>
+                    <p>Excelente Casa à venda ou Locação</p>
+                </div>
+
+                <div class="flex text-cinza2 p-5 gap-3 ">
+                    <p>500m²</p>
+                    <div class="flex gap-1 items-center">
+                        <img src="images/bed.png" class="h-4">
+                        <p>3 Quartos</p>
+                    </div>
+                    <div class="flex gap-1 items-center">
+                        <img src="images/car.png" class="h-4">
+                        <p>5 Garagem</p>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center p-4">
+                    <p class="text-laranja font-bold text-2xl">R$ 5.000</p>
+                    <div class="bg-laranja text-white h-12 w-22 flex justify-center items-center rounded-xl">
+                        <p>Contatar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD ALUGUEL -->
+        <div class=" border border-black/15  rounded-xl w-full">
+            <img src="images/casa.png" class="h-[248px] w-full rounded-t-xl object-cover">
+            <div class="flex flex-col font-semibold">
+                <div class="flex items-center justify-between p-5">
+                    <div class="text-cinza">
+                        <p>Rua Eduardo Bezerra, 1182</p>
+                        <p>São joão do Taouape, Fortaleza/CE</p>
+                    </div>
+                    <div class="bg-laranja/20 h-10 w-10 flex justify-center items-center rounded-lg">
+                        <img src="images/lixo.png" class="h-4.5">
+                    </div>
+                </div>
+                <div class="text-cinza2 px-5">
+                    <p>Casa para alugar, 500m²</p>
+                    <p>Excelente Casa à venda ou Locação</p>
+                </div>
+
+                <div class="flex text-cinza2 p-5 gap-3 ">
+                    <p>500m²</p>
+                    <div class="flex gap-1 items-center">
+                        <img src="images/bed.png" class="h-4">
+                        <p>3 Quartos</p>
+                    </div>
+                    <div class="flex gap-1 items-center">
+                        <img src="images/car.png" class="h-4">
+                        <p>5 Garagem</p>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center p-4">
+                    <p class="text-laranja font-bold text-2xl">R$ 5.000</p>
+                    <div class="bg-laranja text-white h-12 w-22 flex justify-center items-center rounded-xl">
+                        <p>Contatar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD ALUGUEL -->
+        <div class=" border border-black/15  rounded-xl w-full">
+            <img src="images/casa.png" class="h-[248px] w-full rounded-t-xl object-cover">
+            <div class="flex flex-col font-semibold">
+                <div class="flex items-center justify-between p-5">
+                    <div class="text-cinza">
+                        <p>Rua Eduardo Bezerra, 1182</p>
+                        <p>São joão do Taouape, Fortaleza/CE</p>
+                    </div>
+                    <div class="bg-laranja/20 h-10 w-10 flex justify-center items-center rounded-lg">
+                        <img src="images/lixo.png" class="h-4.5">
+                    </div>
+                </div>
+                <div class="text-cinza2 px-5">
+                    <p>Casa para alugar, 500m²</p>
+                    <p>Excelente Casa à venda ou Locação</p>
+                </div>
+
+                <div class="flex text-cinza2 p-5 gap-3 ">
+                    <p>500m²</p>
+                    <div class="flex gap-1 items-center">
+                        <img src="images/bed.png" class="h-4">
+                        <p>3 Quartos</p>
+                    </div>
+                    <div class="flex gap-1 items-center">
+                        <img src="images/car.png" class="h-4">
+                        <p>5 Garagem</p>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center p-4">
+                    <p class="text-laranja font-bold text-2xl">R$ 5.000</p>
+                    <div class="bg-laranja text-white h-12 w-22 flex justify-center items-center rounded-xl">
+                        <p>Contatar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer class="h-[130px] lg:h-[106px] bg-laranja flex flex-col gap-2 justify-center items-center lg:flex-row lg:justify-between lg:px-15">
+        <div class="flex gap-2 items-center">
+            <div class="w-9 h-9 bg-white rounded flex justify-center items-center">
+                <img src="images/icone-laranja.png" alt="" class="block">
+            </div>
+            <span class="text-xl font-bold text-white">Aluga Web</span>
+        </div>
+        <div>
+            <h6 class="text-white text-sm font-bold">&copy2025 - Todos os direitos reservados.</h6>
+        </div>
+    </footer>
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
