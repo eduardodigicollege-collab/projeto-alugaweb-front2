@@ -26,152 +26,216 @@
 </head>
 
 <body class="">
-    <div class="lg:flex lg:gap-60 lg:pt-8 items-center justify-center">
+    <header class="flex justify-between p-4 lg:px-15 border-b border-b-black/15">
+        <!-- LOGO -->
+        <div class="flex items-center gap-3">
+            <div onclick="abrirMenu()" class="lg:hidden">
+                <box-icon name="menu"></box-icon>
+            </div>
+            <div class="w-9 h-9 bg-laranja rounded flex justify-center items-center">
+                <img src="images/icone.png" alt="" class="block">
+            </div>
+            <span class="text-xl font-bold text-laranja">Aluga Web</span>
+        </div>
+        <!-- BOTOES -->
         <div>
-            <div class="flex text-cinza font-semibold">
-                <p>Casas para alugar</p>
-                <box-icon name='chevron-right' class="fill-cinza"></box-icon>
-                <p>CE</p>
-                <box-icon name='chevron-right' class="fill-cinza"></box-icon>
-                <p>Fortaleza</p>
+            <a href="login.html"
+                class="h-10 px-4 flex items-center gap-3 bg-laranja/20 rounded-md text-laranja fill-laranja duration-150 hover:bg-laranja hover:text-white hover:fill-white">
+                <box-icon name='user'></box-icon>
+                Entrar
+            </a>
+        </div>
+    </header>
+    <div onclick="fecharMenu()" id="overlay"
+        class="w-full h-screen bg-black/80 fixed top-0 left-0 duration-200 md:hidden invisible opacity-0"></div>
+    <div id="menu" class="bg-white h-screen p-4 fixed top-0 -left-[80%] duration-200 w-[80%] md:hidden">
+        <div class="flex items-center gap-3">
+            <div class="w-9 h-9 bg-laranja rounded flex justify-center items-center">
+                <img src="images/icone.png" alt="" class="block">
             </div>
-            <p class="text-laranja font-bold text-xl">122 Casas para alugar em Fortaleza - CE</p>
+            <span class="text-xl font-bold text-laranja">Aluga Web</span>
+        </div>
+        <div class="flex items-center gap-4 py-4 bg-laranja/7 mt-5">
+            <img src="images/OIP.webp" alt="" class=" w-[70px] h-[70px] rounded-full ">
+            <span class="text-xl font-bold text-laranja">Silvio Santos</span>
+        </div>
+        <div class="mt-8">
+            <a href="favoritos.html" class="flex gap-3 items-center">
+                <box-icon name='heart'></box-icon>
+                <span class="font-bold text-gray justify-center gap-4">Favoritos</span>
+            </a>
+        </div>
+        <div class="mt-8">
+            <a class="flex gap-3 items-center">
+                <box-icon name='log-out'></box-icon>
+                <span class="font-bold text-gray ">Sair</span>
+            </a>
         </div>
 
-        <div class=" invisible  lg:visible flex border border-black/15 rounded-lg items-center lg:gap-20 p-3">
-            <div>
-                <p class="text-cinza text-sm">Ordenar por</p>
-                <p class="text-laranja font-semibold">Mais relevantes</p>
+    </div>
+    <div class="flex px-15">
+        <!-- Filtros -->
+        <div class="w-[350px]">
+            <h5 class="mb-10">Filtros</h5>
+            <div class="border border-stone-300 rounded-2xl">
+                
             </div>
-            <div class="flex flex-col">
-                <box-icon name='chevron-up' class="fill-cinza2 h-4"></box-icon>
-                <box-icon name='chevron-down' class="fill-cinza2 h-4"></box-icon>
+        </div>
+        <div class="flex-1">
+            <div class="lg:flex  lg:pt-8 items-center justify-between mb-6">
+                <div>
+                    <div class="flex text-cinza font-semibold">
+                        <p>Casas para alugar</p>
+                        <box-icon name='chevron-right' class="fill-cinza"></box-icon>
+                        <p>CE</p>
+                        <box-icon name='chevron-right' class="fill-cinza"></box-icon>
+                        <p>Fortaleza</p>
+                    </div>
+                    <p class="text-laranja font-bold text-xl">122 Casas para alugar em Fortaleza - CE</p>
+                </div>
+
+                <div class=" invisible  lg:visible flex border border-black/15 rounded-lg items-center lg:gap-20 p-3">
+                    <div>
+                        <p class="text-cinza text-sm">Ordenar por</p>
+                        <p class="text-laranja font-semibold">Mais relevantes</p>
+                    </div>
+                    <div class="flex flex-col">
+                        <box-icon name='chevron-up' class="fill-cinza2 h-4"></box-icon>
+                        <box-icon name='chevron-down' class="fill-cinza2 h-4"></box-icon>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 1 -->
+            <div class="border border-gray-300 rounded-2xl flex mb-2 flex-col md:flex-row">
+                <img src="./images/image2.png" alt="imagemCasa" class="">
+                <div class="p-4 flex-1">
+                    <div class="flex justify-between mb-8">
+                        <div>
+                            <h4 class="font-semibold text-[#595959]">Rua Eduardo Bezerra, 1182</h4>
+                            <h4 class="font-semibold text-[#595959]">São Joao do Taouape, Fortaleza/CE</h4>
+                        </div>
+                        <div class="bg-[#E04300]/20 w-14 h-14 rounded-lg flex items-center justify-center">
+                            <box-icon name="heart" class="fill-laranja"></box-icon>
+                        </div>
+                    </div>
+                    <div class="flex justify-between mb-8">
+                        <div>
+                            <h4 class="font-semibold text-[#959595]">Casa pra alugar, 500m²</h4>
+                            <h4 class="font-semibold text-[#959595]">Excelente casa à venda ou Locação</h4>
+                        </div>
+                        <!-- escondido no mobile first -->
+                        <h1 class="hidden md:block text-[#E04300] font-bold text-2xl">R$ 5.000</h1>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex gap-5">
+                            <h5 class="text-[#959595] text-sm">500m²</h5>
+                            <h5 class="text-[#959595] text-sm">3 Quartos</h5>
+                            <h5 class="text-[#959595] text-sm">5 Garagem</h5>
+                        </div>
+                        <div
+                            class="hidden md:flex w-24 h-12 bg-[#E04300] text-white rounded-lg justify-center items-center">
+                            Contatar
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mt-5">
+                        <!-- existe no mobile! -->
+                        <h1 class="md:hidden text-[#E04300] font-bold text-2xl">R$ 5.000</h1>
+                        <div
+                            class="md:hidden w-24 h-12 bg-[#E04300] text-white rounded-lg flex justify-center items-center">
+                            Contatar
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 2 -->
+            <div class="border border-gray-300 rounded-2xl flex mb-2 flex-col md:flex-row">
+                <img src="./images/image2.png" alt="imagemCasa" class="">
+                <div class="p-4 flex-1">
+                    <div class="flex justify-between mb-8">
+                        <div>
+                            <h4 class="font-semibold text-[#595959]">Rua Eduardo Bezerra, 1182</h4>
+                            <h4 class="font-semibold text-[#595959]">São Joao do Taouape, Fortaleza/CE</h4>
+                        </div>
+                        <div class="bg-[#E04300]/20 w-14 h-14 rounded-lg flex items-center justify-center">
+                            <box-icon name="heart" class="fill-laranja"></box-icon>
+                        </div>
+                    </div>
+                    <div class="flex justify-between mb-8">
+                        <div>
+                            <h4 class="font-semibold text-[#959595]">Casa pra alugar, 500m²</h4>
+                            <h4 class="font-semibold text-[#959595]">Excelente casa à venda ou Locação</h4>
+                        </div>
+                        <!-- escondido no mobile first -->
+                        <h1 class="hidden md:block text-[#E04300] font-bold text-2xl">R$ 5.000</h1>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex gap-5">
+                            <h5 class="text-[#959595] text-sm">500m²</h5>
+                            <h5 class="text-[#959595] text-sm">3 Quartos</h5>
+                            <h5 class="text-[#959595] text-sm">5 Garagem</h5>
+                        </div>
+                        <div
+                            class="hidden md:flex w-24 h-12 bg-[#E04300] text-white rounded-lg justify-center items-center">
+                            Contatar
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mt-5">
+                        <!-- existe no mobile! -->
+                        <h1 class="md:hidden text-[#E04300] font-bold text-2xl">R$ 5.000</h1>
+                        <div
+                            class="md:hidden w-24 h-12 bg-[#E04300] text-white rounded-lg flex justify-center items-center">
+                            Contatar
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 3 -->
+            <div class="border border-gray-300 rounded-2xl flex mb-2 flex-col md:flex-row">
+                <img src="./images/image2.png" alt="imagemCasa" class="">
+                <div class="p-4 flex-1">
+                    <div class="flex justify-between mb-8">
+                        <div>
+                            <h4 class="font-semibold text-[#595959]">Rua Eduardo Bezerra, 1182</h4>
+                            <h4 class="font-semibold text-[#595959]">São Joao do Taouape, Fortaleza/CE</h4>
+                        </div>
+                        <div class="bg-[#E04300]/20 w-14 h-14 rounded-lg flex items-center justify-center">
+                            <box-icon name="heart" class="fill-laranja"></box-icon>
+                        </div>
+                    </div>
+                    <div class="flex justify-between mb-8">
+                        <div>
+                            <h4 class="font-semibold text-[#959595]">Casa pra alugar, 500m²</h4>
+                            <h4 class="font-semibold text-[#959595]">Excelente casa à venda ou Locação</h4>
+                        </div>
+                        <!-- escondido no mobile first -->
+                        <h1 class="hidden md:block text-[#E04300] font-bold text-2xl">R$ 5.000</h1>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex gap-5">
+                            <h5 class="text-[#959595] text-sm">500m²</h5>
+                            <h5 class="text-[#959595] text-sm">3 Quartos</h5>
+                            <h5 class="text-[#959595] text-sm">5 Garagem</h5>
+                        </div>
+                        <div
+                            class="hidden md:flex w-24 h-12 bg-[#E04300] text-white rounded-lg justify-center items-center">
+                            Contatar
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mt-5">
+                        <!-- existe no mobile! -->
+                        <h1 class="md:hidden text-[#E04300] font-bold text-2xl">R$ 5.000</h1>
+                        <div
+                            class="md:hidden w-24 h-12 bg-[#E04300] text-white rounded-lg flex justify-center items-center">
+                            Contatar
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- CARD 1 -->
-    <div class="border border-gray-300 flex mb-2 flex-col md:flex-row">
-        <img src="./images/image2.png" alt="imagemCasa" class="">
-        <div class="p-4 flex-1">
-            <div class="flex justify-between mb-8">
-                <div>
-                    <h4 class="font-semibold text-[#595959]">Rua Eduardo Bezerra, 1182</h4>
-                    <h4 class="font-semibold text-[#595959]">São Joao do Taouape, Fortaleza/CE</h4>
-                </div>
-                <div class="bg-[#E04300]/20 w-14 h-14 rounded-lg flex items-center justify-center">
-                    <box-icon name="heart" class="fill-laranja"></box-icon>
-                </div>
-            </div>
-            <div class="flex justify-between mb-8">
-                <div>
-                    <h4 class="font-semibold text-[#959595]">Casa pra alugar, 500m²</h4>
-                    <h4 class="font-semibold text-[#959595]">Excelente casa à venda ou Locação</h4>
-                </div>
-                <!-- escondido no mobile first -->
-                <h1 class="hidden md:block text-[#E04300] font-bold text-2xl">R$ 5.000</h1>
-            </div>
-            <div class="flex justify-between items-center">
-                <div class="flex gap-5">
-                    <h5 class="text-[#959595] text-sm">500m²</h5>
-                    <h5 class="text-[#959595] text-sm">3 Quartos</h5>
-                    <h5 class="text-[#959595] text-sm">5 Garagem</h5>
-                </div>
-                <div class="hidden md:flex w-24 h-12 bg-[#E04300] text-white rounded-lg justify-center items-center">
-                    Contatar
-                </div>
-            </div>
-            <div class="flex justify-between items-center mt-5">
-                <!-- existe no mobile! -->
-                <h1 class="md:hidden text-[#E04300] font-bold text-2xl">R$ 5.000</h1>
-                <div class="md:hidden w-24 h-12 bg-[#E04300] text-white rounded-lg flex justify-center items-center">
-                    Contatar
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- CARD 2 -->
-    <div class="border border-gray-300 flex mb-2 flex-col md:flex-row">
-        <img src="./images/image2.png" alt="imagemCasa" class="">
-        <div class="p-4 flex-1">
-            <div class="flex justify-between mb-8">
-                <div>
-                    <h4 class="font-semibold text-[#595959]">Rua Eduardo Bezerra, 1182</h4>
-                    <h4 class="font-semibold text-[#595959]">São Joao do Taouape, Fortaleza/CE</h4>
-                </div>
-                <div class="bg-[#E04300]/20 w-14 h-14 rounded-lg flex items-center justify-center">
-                    <box-icon name="heart" class="fill-laranja"></box-icon>
-                </div>
-            </div>
-            <div class="flex justify-between mb-8">
-                <div>
-                    <h4 class="font-semibold text-[#959595]">Casa pra alugar, 500m²</h4>
-                    <h4 class="font-semibold text-[#959595]">Excelente casa à venda ou Locação</h4>
-                </div>
-                <!-- escondido no mobile first -->
-                <h1 class="hidden md:block text-[#E04300] font-bold text-2xl">R$ 5.000</h1>
-            </div>
-            <div class="flex justify-between items-center">
-                <div class="flex gap-5">
-                    <h5 class="text-[#959595] text-sm">500m²</h5>
-                    <h5 class="text-[#959595] text-sm">3 Quartos</h5>
-                    <h5 class="text-[#959595] text-sm">5 Garagem</h5>
-                </div>
-                <div class="hidden md:flex w-24 h-12 bg-[#E04300] text-white rounded-lg justify-center items-center">
-                    Contatar
-                </div>
-            </div>
-            <div class="flex justify-between items-center mt-5">
-                <!-- existe no mobile! -->
-                <h1 class="md:hidden text-[#E04300] font-bold text-2xl">R$ 5.000</h1>
-                <div class="md:hidden w-24 h-12 bg-[#E04300] text-white rounded-lg flex justify-center items-center">
-                    Contatar
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- CARD 3 -->
-    <div class="border border-gray-300 flex mb-2 flex-col md:flex-row">
-        <img src="./images/image2.png" alt="imagemCasa" class="">
-        <div class="p-4 flex-1">
-            <div class="flex justify-between mb-8">
-                <div>
-                    <h4 class="font-semibold text-[#595959]">Rua Eduardo Bezerra, 1182</h4>
-                    <h4 class="font-semibold text-[#595959]">São Joao do Taouape, Fortaleza/CE</h4>
-                </div>
-                <div class="bg-[#E04300]/20 w-14 h-14 rounded-lg flex items-center justify-center">
-                    <box-icon name="heart" class="fill-laranja"></box-icon>
-                </div>
-            </div>
-            <div class="flex justify-between mb-8">
-                <div>
-                    <h4 class="font-semibold text-[#959595]">Casa pra alugar, 500m²</h4>
-                    <h4 class="font-semibold text-[#959595]">Excelente casa à venda ou Locação</h4>
-                </div>
-                <!-- escondido no mobile first -->
-                <h1 class="hidden md:block text-[#E04300] font-bold text-2xl">R$ 5.000</h1>
-            </div>
-            <div class="flex justify-between items-center">
-                <div class="flex gap-5">
-                    <h5 class="text-[#959595] text-sm">500m²</h5>
-                    <h5 class="text-[#959595] text-sm">3 Quartos</h5>
-                    <h5 class="text-[#959595] text-sm">5 Garagem</h5>
-                </div>
-                <div class="hidden md:flex w-24 h-12 bg-[#E04300] text-white rounded-lg justify-center items-center">
-                    Contatar
-                </div>
-            </div>
-            <div class="flex justify-between items-center mt-5">
-                <!-- existe no mobile! -->
-                <h1 class="md:hidden text-[#E04300] font-bold text-2xl">R$ 5.000</h1>
-                <div class="md:hidden w-24 h-12 bg-[#E04300] text-white rounded-lg flex justify-center items-center">
-                    Contatar
-                </div>
-            </div>
-        </div>
-    </div>
- 
-   
+
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
 
