@@ -23,8 +23,31 @@
     </style>
 </head>
 
-<body class="">
-    <h1>Login</h1>
+<body class="flex justify-center items-center h-screen">
+    <form class="w-[400px] border rounded-xl p-4 ">
+        <h2 class="flex justify-center text-center font-bold text-laranja text-xl mb-5"><img src="images/icone-laranja.png" alt="">aluga web</h2>
+        
+        <label for="email" class=" text-xs uppercase font-bold text-black block mb-3">Email</label>
+
+        <input id="email" type="text" placeholder="email"
+            class="w-full h-10 mb-4 border border-black/20 rounded pl-3 outline-2 outline-offset-2">
+
+        <label for="senha" class=" text-xs uppercase font-bold text-black block mb-3">Senha</label>
+
+        <input id="senha" type="password" placeholder="*********"
+            class="w-full h-10 mb-4 border rounded border-black/20 pl-3 outline-2 outline-offset-2">
+
+            <div class="flex justify-between ">
+                <a class="hover:font-bold p-3" href="">esqueci minha senha</a>
+                <a class="hover:font-bold p-3" href="">criar conta</a>
+            </div>
+
+            <button class=" w-full h-10 bg-laranja rounded text-white hover:bg-orange-800 cursor-pointer text-xl mb-4" duration-200">entrar</button>
+
+    
+    </form>
+
+    
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
