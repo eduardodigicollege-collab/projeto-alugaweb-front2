@@ -59,7 +59,8 @@
             </div>
         </div>
     </main>
-    <footer class="h-[130px] lg:h-[106px] bg-laranja flex flex-col gap-2 justify-center items-center lg:flex-row lg:justify-between lg:px-15">
+    <footer
+        class="h-[130px] lg:h-[106px] bg-laranja flex flex-col gap-2 justify-center items-center lg:flex-row lg:justify-between lg:px-15">
         <div class="flex gap-2 items-center">
             <div class="w-9 h-9 bg-white rounded flex justify-center items-center">
                 <img src="images/icone-laranja.png" alt="" class="block">
@@ -70,6 +71,50 @@
             <h6 class="text-white text-sm font-bold">&copy2025 - Todos os direitos reservados.</h6>
         </div>
     </footer>
+
+    <div id="overlay" class="w-full h-screen bg-black/80 fixed top-0 left-0 md:hidden "></div>
+
+    <div id="menu" class="bg-white h-screen p-4 fixed top-0 left-0 w-[80%] md:hidden">
+
+        <div class="flex items-center gap-3">
+            <div class="w-9 h-9 bg-laranja rounded flex justify-center items-center">
+                <img src="images/icone.png" alt="" class="block">
+            </div>
+            <span class="text-xl font-bold text-laranja">Aluga Web</span>
+
+        </div>
+       
+       
+        <div class="flex items-center gap-4 py-4 bg-laranja/7 mt-5">
+            <img src="images/OIP.webp" alt="" class=" w-[70px] h-[70px] rounded-full "> 
+          
+            <span class="text-xl font-bold text-laranja">Silvio Santos</span>
+
+        </div>
+
+       
+       
+        <div class="mt-8">
+            <a href="favoritos.html" class="">
+            
+                <box-icon name='heart' ></box-icon>
+                <span class="font-bold text-gray justify-center gap-4">Favoritos</span>
+                </a>
+        </div>
+
+
+        <div class="mt-8">
+            <a>
+            <box-icon name='log-out' ></box-icon>
+            <span class="font-bold text-gray ">Sair</span>
+
+            </a>
+            </div>
+
+    </div>
+
+
+
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
